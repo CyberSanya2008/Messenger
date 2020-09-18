@@ -16,6 +16,7 @@ app.on("ready", function () {
     webPreferences: {
       nodeIntegration: true,
     },
+    
   });
   
   //Загрузка Html в окне
@@ -25,7 +26,8 @@ app.on("ready", function () {
       protocol: "file:",
       slashes: true,
     })
+    
   );
-
+  mainWindow.webContents.openDevTools();
  
 });
