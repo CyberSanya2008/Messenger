@@ -6,7 +6,7 @@ const { app, BrowserWindow, Menu } = electron;
 
 let mainWindow;
 
-// Настройки окна 
+// Настройки окна
 app.on("ready", function () {
   mainWindow = new BrowserWindow({
     width: 700,
@@ -16,9 +16,8 @@ app.on("ready", function () {
     webPreferences: {
       nodeIntegration: true,
     },
-    
   });
-  
+
   //Загрузка Html в окне
   mainWindow.loadURL(
     url.format({
@@ -26,8 +25,6 @@ app.on("ready", function () {
       protocol: "file:",
       slashes: true,
     })
-    
   );
   mainWindow.webContents.openDevTools();
- 
 });
