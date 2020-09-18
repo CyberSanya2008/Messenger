@@ -6,7 +6,7 @@ const { app, BrowserWindow, Menu } = electron;
 
 let mainWindow;
 
-// Listen for the app to be ready
+// Настройки окна 
 app.on("ready", function () {
   mainWindow = new BrowserWindow({
     width: 700,
@@ -18,10 +18,10 @@ app.on("ready", function () {
     },
   });
   
-  //load html into window
+  //Загрузка Html в окне
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "mainWindow.html"),
+      pathname: path.join(__dirname, "templates/mainWindow.html"),
       protocol: "file:",
       slashes: true,
     })
