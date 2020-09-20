@@ -45,16 +45,35 @@ function LoginUser() {
         console.log("error");
       } else {
         // Запись данных пользователя в файл после авторизации
+        // в случае успешной авторизации
         let current_user = {
           email: email,
+          name: response,
           password: password,
         };
 
         let data = JSON.stringify(current_user);
         fs.writeFileSync("current_user.json", data);
+
+        // Переход на страницу пользователя
+        window.location.href = "profile.html";
       }
     })
     .catch(function (err) {
       // Произошло что-то плохое, обработка ошибки
     });
+}
+
+function CheckAuth() {
+  if (fs.readFileSync("current_user.json")) {
+    window.location.href = "profile.html";
+  }
+}
+
+function ShowProfileName() {
+  
+  let rawdata = fs.readFileSync('current_user.json');
+  let user = JSON.parse(rawdata)
+  let username = document.getElementById("UserName");
+  username.innerHTML = user.name;
 }
