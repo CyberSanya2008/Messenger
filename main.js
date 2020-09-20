@@ -9,8 +9,8 @@ let mainWindow;
 // Настройки окна
 app.on("ready", function () {
   mainWindow = new BrowserWindow({
-    width: 700,
-    height: 500,
+    width: 1000,
+    height: 800,
     minHeight: 500,
     minWidth: 700,
     webPreferences: {
