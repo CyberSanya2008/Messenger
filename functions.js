@@ -71,9 +71,10 @@ function CheckAuth() {
 }
 
 function ShowProfileName() {
-  
-  let rawdata = fs.readFileSync('current_user.json');
-  let user = JSON.parse(rawdata)
+  let rawdata = fs.readFileSync("current_user.json");
+  let user = JSON.parse(rawdata);
   let username = document.getElementById("UserName");
+  let username2 = document.getElementById("UserName2");
   username.innerHTML = user.name;
+  username2.innerHTML = user.name;
 }
