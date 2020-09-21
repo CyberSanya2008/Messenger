@@ -3,6 +3,7 @@
   <head>
     <script src="../functions.js"></script>
     <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/messages.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -39,6 +40,13 @@
       <!-- Content -->
       <main class="s-layout__content">
         <h1>Диалоги</h1>
+        <br>
+        <div>       
+            <input name="email" type="text" class="feedback-input" placeholder="Кому" id="reciever" />
+            <textarea name="text" class="feedback-input" placeholder="Текст сообщения" id="message_text"></textarea>
+            <input type="submit" value="SUBMIT" onclick="SendMessage()"/>
+        </div>
+        
       </main>
       </div>
   </body>

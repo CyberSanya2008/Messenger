@@ -78,3 +78,31 @@ function ShowProfileName() {
   username.innerHTML = user.name;
   username2.innerHTML = user.name;
 }
+
+function SendMessage() {
+  let rawdata = fs.readFileSync("current_user.json");
+  let user = JSON.parse(rawdata);
+
+  let reciever = document.getElementById("reciever").value;
+  let message_text = document.getElementById('message_text').value
+
+  request.post(
+    "http://127.0.0.1:5000/sendmessage",
+    {
+      json: {
+        sender: user.email,
+        reciever: reciever,
+        message_text: message_text,
+      },
+    },
+    (error, res, body) => {
+      if (error) {
+        console.error(error);
+        return;
+      }
+      console.log(`statusCode: ${res.statusCode}`);
+      console.log(body);
+    }
+  );
+
+}
