@@ -11,8 +11,8 @@ app.on("ready", function () {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
-    minHeight: 500,
-    minWidth: 700,
+    minHeight: 700,
+    minWidth: 800,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -21,10 +21,13 @@ app.on("ready", function () {
   //Загрузка Html в окне
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "templates/mainWindow.html"),
+      pathname: path.join(
+        __dirname,
+        "templates/startup/startup.html"
+      ),
       protocol: "file:",
       slashes: true,
     })
   );
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 });

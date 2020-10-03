@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.form-box {
+  width: 380px;
+  height: 400px;
+  position: relative;
+  margin: 12% auto;
+  background: white;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+
+.toogle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  outline:none;
+}
+
+.submit-btn {
+  
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin:20px auto;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+#login {
+  left: 50px;
+}
+
+#signup {
+  left: 450px;
+}

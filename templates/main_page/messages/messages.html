@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <script src="profile.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="ShowProfileName()" class="preload" id="myDIV">
+    <input type="checkbox" id="check" checked />
+
+    <div class="sidebar">
+      <a href=""><i class="fas fa-desktop"></i><span>Main Page</span></a>
+      <a href=""><i class="fas fa-envelope"></i><span>Messages</span></a>
+      <a href=""><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+      <a href="#" onclick="logout()"
+        ><i class="fas fa-sign-out-alt"></i><span>Log out</span></a
+      >
+      <a href=""
+        ><label for="check">
+          <i class="fas fa-bars" id="sidebar_btn"></i> </label
+      ></a>
+    </div>
+
+    <div class="content">
+      <div class="inner_content">
+        <h1>Ваш профиль</h1>
+        <h1 id="UserName"></h1>
+      </div>
+    </div>
+    <script>
+      function remove() {
+        let element = document.getElementById("myDIV");
+        element.classList.remove("preload");
+      }
+
+      setTimeout(remove, 10);
+    </script>
+  </body>
+</html>

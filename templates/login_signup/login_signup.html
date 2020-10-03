@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login_signup.css" />
+    <script src="login_signup.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toogle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toogle-btn" onclick="signup()">
+            Sign Up
+          </button>
+        </div>
+        <div id="login" class="input-group">
+          <input
+            id="email_login"
+            type="text"
+            class="input-field"
+            placeholder="Email"
+          />
+          <input
+            id="password_login"
+            type="password"
+            class="input-field"
+            placeholder="Password"
+          />
+          <button class="submit-btn" onclick="Login()">Log In</button>
+        </div>
+        <div id="signup" class="input-group">
+          <input id="name" type="text" class="input-field" placeholder="Name" />
+          <input
+            id="email"
+            type="text"
+            class="input-field"
+            placeholder="Email"
+          />
+          <input
+            id="password"
+            type="password"
+            class="input-field"
+            placeholder="Password"
+          />
+          <button class="submit-btn" onclick="SignUp()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let x = document.getElementById("login");
+      let y = document.getElementById("signup");
+      let z = document.getElementById("btn");
+
+      function signup() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>
