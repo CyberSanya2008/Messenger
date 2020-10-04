@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 function ShowProfileName() {
   let rawdata = fs.readFileSync("current_user.json");
   let user = JSON.parse(rawdata);

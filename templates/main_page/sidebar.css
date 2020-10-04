@@ -121,7 +121,7 @@ label #sidebar_btn:hover {
 .inner_content {
   margin: 0 auto;
   width: 90%;
-  background: black;
+  background: gray;
   padding: 20px;
   color: white;
   text-align: center;
