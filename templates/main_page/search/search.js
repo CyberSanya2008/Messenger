@@ -5,6 +5,8 @@ let delayTimer;
 function Search() {
   let search = document.getElementById("search");
   let rawdata = fs.readFileSync("current_user.json");
+  let list = document.getElementById("list");
+
   let user = JSON.parse(rawdata);
   const options = {
     method: "GET",
@@ -25,6 +27,14 @@ function Search() {
           console.log("error");
         } else {
           let data = JSON.parse(response);
+          list.innerHTML = "";
+          for (let i = 0; i < 10; i++) {
+            let liFirst = document.createElement("li");
+            liFirst.innerHTML = `<a href="#">${data[i]}</a>`;
+            if (data[i] != undefined) {
+              list.prepend(liFirst);
+            }
+          }
 
           console.log(data);
         }
