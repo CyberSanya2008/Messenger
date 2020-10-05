@@ -40,14 +40,17 @@
         <h1>Поиск</h1>
         <div class="f">
           <input
-            onkeyup="Search()"
+            oninput="Search()"
             id="search"
             type="text"
             class="input-field"
             placeholder="Email пользователя"
           />
         </div>
+        <ol id="list" class="rectangle"></ol>
+        <button id="more" class="more_btn">More</button>
       </div>
+      
     </div>
     <script>
       function remove() {
