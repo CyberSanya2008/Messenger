@@ -30,11 +30,11 @@ function Search() {
           list.innerHTML = "";
           let i = 0;
           let more = 9;
-          let da = data.length;
+          
 
           for (i; i < 10; i++) {
             let liFirst = document.createElement("li");
-            liFirst.innerHTML = `<a href="#">${data[i]}</a>`;
+            liFirst.innerHTML = `<a href="#" id="modal">${data[i]}<br><div class="send_msg">Написать Сообщение</div></a>`;
 
             if (data[i] != undefined) {
               list.append(liFirst);
@@ -45,7 +45,7 @@ function Search() {
             for (let i = 0; i < 10; i++) {
               more++;
               let show_more = document.createElement("li");
-              show_more.innerHTML = `<a href="#">${data[more]}</a>`;
+              show_more.innerHTML = `<a href="#" >${data[more]}</a><h1>JOPA</h1>`;
               if (data[more] != undefined) {
                 list.append(show_more);
               }

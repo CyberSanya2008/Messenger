@@ -3,4 +3,5 @@ function ShowProfileName() {
   let user = JSON.parse(rawdata);
   let username = document.getElementById("UserName");
   username.innerHTML = user.name;
+  
 }

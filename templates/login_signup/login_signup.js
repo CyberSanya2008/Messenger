@@ -28,7 +28,7 @@ function SignUp() {
       if (body == "Error") {
       } else {
         let name = document.getElementById("name").value;
-        
+
         let current_user = {
           email: email,
           name: name,
