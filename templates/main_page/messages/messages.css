@@ -17,13 +17,16 @@
 
 .chat-messages {
   height: 95%;
-  overflow-y: scroll;
-  background-color: darkslateblue;
+  overflow-y: hidden;
+  background-color: #2a2a2a;
 }
-
+.chat-messages:hover {
+  overflow-y: scroll;
+}
 .chat-form-container {
   background-color: black;
   flex-grow: 3;
+  border-top: 4px solid #1a1a1a;
 }
 
 .chat-form-container form {
@@ -31,26 +34,39 @@
 }
 
 .chat-form-container input[type="text"] {
+  background-color: #2a2a2a;
+  color: #fff;
   font-size: 16px;
   height: 50px;
   flex: 1;
+  outline: none;
+  border: 0;
 }
 
 .btn {
   cursor: pointer;
   padding: 5px 15px;
-  background: pink;
-  color: black;
+  background: #2a2a2a;
+  color: white;
   border: 0;
   font-size: 17px;
+  transition: 0.5s;
 }
 
+.btn:hover {
+  background: #f26766;
+
+}
 .chat-sidebar {
-  background: green;
+  background: #2a2a2a;
   color: #fff;
 
-  overflow-y: scroll;
+  overflow-y: hidden;
   flex-grow: 3;
+}
+
+.chat-sidebar:hover {
+  overflow-y: scroll;
 }
 
 .dialogs {

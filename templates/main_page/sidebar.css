@@ -7,6 +7,10 @@ html {
   padding: 0;
 }
 
+body {
+  background-color: #1a1a1a;
+}
+
 .left_area h3 {
   color: #fff;
   margin: 0;
@@ -32,7 +36,7 @@ html {
 }
 
 .sidebar {
-  background: #2f323a;
+  background: #0f0f0f;
   position: fixed;
   left: 0;
   width: 250px;
@@ -60,7 +64,7 @@ html {
 }
 
 .sidebar a:hover {
-  background: #19b3d3;
+  background: #f26766;
 }
 
 .sidebar i {
@@ -80,7 +84,7 @@ label #sidebar_btn {
   transition-property: color;
 }
 label #sidebar_btn:hover {
-  color: #19b3d3;
+  color: #f26766;
 }
 
 #check:checked ~ .sidebar {
@@ -101,7 +105,7 @@ label #sidebar_btn:hover {
   height: 100vh;
   transition: 0.5s;
   transition-property: margin-left;
-  padding-left: 10px;
+  padding-left: 4px;
 }
 
 #check:checked ~ .content {
@@ -122,20 +126,42 @@ label #sidebar_btn:hover {
   margin: 0 auto;
   width: 90%;
   background: gray;
-  
+
   color: white;
   text-align: center;
 }
-body::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
 
-body::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
 }
-body::-webkit-scrollbar-thumb {
-  background-color: #11171a;
-  border-radius: 10px;
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f0f0f;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #2a2a2a;
+}
+::-webkit-scrollbar-track:active {
+  background: #2a2a2a;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
