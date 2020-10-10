@@ -1,14 +1,60 @@
-.chat-container {
-  background-color: pink;
-  height: 100vh;
-  width: 100%;
+#menu {
+  height: 100%;
+  float: left;
+  width: 250px;
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
 }
 
-.chat-main {
-	display: flex;
-	flex-direction: row;
+#content {
+  height: 100%;
+  margin-left: 254px; /* menu width + (2 x menu.border-width) */
+  background-color: darkorange;
+  display: flex;
+  flex-direction: column;
 }
 
-.messages{
+.chat-messages {
+  height: 95%;
+  overflow-y: scroll;
+  background-color: darkslateblue;
+}
+
+.chat-form-container {
+  background-color: black;
+  flex-grow: 3;
+}
+
+.chat-form-container form {
+  display: flex;
+}
+
+.chat-form-container input[type="text"] {
+  font-size: 16px;
+  height: 50px;
   flex: 1;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background: pink;
+  color: black;
+  border: 0;
+  font-size: 17px;
+}
+
+.chat-sidebar {
+  background: green;
+  color: #fff;
+
+  overflow-y: scroll;
+  flex-grow: 3;
+}
+
+.dialogs {
+  margin: 0;
+  background-color: pink;
+  height: 40px;
 }
