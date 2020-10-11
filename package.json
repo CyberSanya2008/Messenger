@@ -12,6 +12,7 @@
     "electron": "^10.1.2",
     "fs": "0.0.1-security",
     "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "socket.io-client": "^2.3.1"
   }
 }
